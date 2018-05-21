@@ -5,10 +5,12 @@
  */
 package main.apifacturas;
 
+import org.json.JSONObject;
+
 /**
  *
- * @author danie
+ * @author juan 
  */
 public interface FormatoDIAN {
-    
+    String crearFormato(JSONObject factura);
 }

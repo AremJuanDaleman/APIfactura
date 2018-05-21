@@ -34,8 +34,9 @@ public class Main {
         return new ResponseEntity<>(formato.crearFormato(factura),HttpStatus.OK);
     }    
     
-    /**@RequestMapping(method = RequestMethod.GET, path = "/xml/{factura}")
-    public ResponseEntity<?> getFacturaXML(@PathVariable String factura){                                
-        return new ResponseEntity<>(null,HttpStatus.OK);
-    }**/
+    @RequestMapping(value = "/dian", method = GET)
+    public ResponseEntity<?> getFacturaDIAN(@RequestParam("factura") JSONObject factura){                        
+        FormatoCliente formato = new FormatoDianXML();        
+        return new ResponseEntity<>(formato.crearFormato(factura),HttpStatus.OK);
+    }   
 }
