@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author danie
+ * @author juan
  */
 public class FormatoDianXML implements FormatoCliente{
 
@@ -33,7 +33,8 @@ public class FormatoDianXML implements FormatoCliente{
         
         
         String cadena=
-        "<?xml version='1.0' encoding='UTF-8'?>"+"\n"+
+        "<html><body>"
+        + "<?xml version='1.0' encoding='UTF-8'?>"+"\n"+
         "<fe:Invoice xmlns:fe='http://www.dian.gov.co/contratos/facturaelectronica/v1' xmlns:cac='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2' xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2' xmlns:clm54217='urn:un:unece:uncefact:codelist:specification:54217:2001' xmlns:clm66411='urn:un:unece:uncefact:codelist:specification:66411:2001' xmlns:clmIANAMIMEMediaType='urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003' xmlns:ext='urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2' xmlns:qdt='urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2' xmlns:sts='http://www.dian.gov.co/contratos/facturaelectronica/v1/Structures' xmlns:udt='urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation=''>"+"\n"+
           "<ext:UBLExtensions>"+"\n"+
             "<ext:UBLExtension>"+"\n"+
@@ -194,7 +195,7 @@ public class FormatoDianXML implements FormatoCliente{
               "<cbc:PriceAmount currencyID='COP'>"+valor+"</cbc:PriceAmount>"+"\n"+
             "</fe:Price>"+"\n"+
           "</fe:InvoiceLine>"+"\n"+
-        "</fe:Invoice>";          
+        "</fe:Invoice>"+"\n"+"<br/></body></html>";          
      return cadena;   
               
               
